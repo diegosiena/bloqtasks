@@ -9,3 +9,12 @@ nav {
 h3 {
   margin-top: 10px !important;
 }
+
+h5 {
+  margin: 0 !important;
+  line-height: 34px !important;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle !important;
+}
