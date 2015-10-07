@@ -1,14 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
 
-<p>
-  <strong>Client:</strong>
-  <%= @project.client %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+    <div class="col-md-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <h5 class="col-md-10">Projeto</h5>
+            <div class="col-md-2">
+              <%= link_to edit_project_path(@project), class: "btn btn-warning pull-right" do %>
+              <b>Editar
+              <i class="glyphicon glyphicon-edit"></i></b>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-6">
+            <label class="control-label" for="inputDescricao">Descrição</label>
+            <input class="form-control" disabled="" id="inputDescricao" type="text" value="<%= @project.description %>"></input>
+          </div>
+            <div class="col-md-6">
+              <label class="control-label" for="inputCliente">Cliente</label>
+              <input class="form-control" disabled="" id="inputCliente" type="text" value="<%= @project.client %>"></input>
+            </div>
+        </div>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+    <div class="clearfix"></div>
+    <br>
+  </div>
+</div>

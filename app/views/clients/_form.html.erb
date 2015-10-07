@@ -1,21 +1,29 @@
 <%= form_for(@client) do |f| %>
-  <% if @client.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+<% if @client.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@client.errors.count, "error") %>
+    prohibited this client from being saved:</h2>
 
-      <ul>
-      <% @client.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @client.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
+<div class="field">
+  <div class="col-md-6">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+</div>
+
+<div class="clearfix"></div>
+<br>
+<div class="col-md-12">
+  <div class="actions pull-right">
+    <%= f.submit "Salvar Cliente", class: "btn btn-warning" %>
   </div>
+</div>
 <% end %>
