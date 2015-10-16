@@ -33,7 +33,7 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Descrição</th>
+              <th>Título</th>
               <th class="col-md-2"></th>
             </tr>
           </thead>
@@ -41,7 +41,7 @@
             <% Project.where(client_id: @client.id).each do |project| %>
             <tr>
               <td><%= project.id %></td>
-              <td><%= project.description %></td>
+              <td><%= project.title %></td>
               <td>
                 <div class="btn-group pull-right">
                   <%= link_to project, class: "btn btn-info" do %>

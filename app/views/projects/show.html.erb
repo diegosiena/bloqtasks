@@ -33,6 +33,37 @@
           </div>
         </div>
       </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <h5 class="col-md-12">Tarefas</h5>
+          </div>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Título</th>
+              <th class="col-md-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% Task.where(project_id: @project.id).each do |task| %>
+            <tr>
+              <td><%= task.id %></td>
+              <td><%= task.title %></td>
+              <td>
+                <div class="btn-group pull-right">
+                  <%= link_to task, class: "btn btn-info" do %>
+                  <i class="glyphicon glyphicon-eye-open"></i><% end %>
+                </div>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div class="clearfix"></div>
