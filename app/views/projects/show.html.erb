@@ -11,20 +11,26 @@
             <div class="col-md-2">
               <%= link_to edit_project_path(@project), class: "btn btn-warning pull-right" do %>
               <b>Editar
-              <i class="glyphicon glyphicon-edit"></i></b>
+                <i class="glyphicon glyphicon-edit"></i>
+              </b>
               <% end %>
             </div>
           </div>
         </div>
         <div class="panel-body">
           <div class="col-md-6">
-            <label class="control-label" for="inputDescricao">Descrição</label>
-            <input class="form-control" disabled="" id="inputDescricao" type="text" value="<%= @project.description %>"></input>
+            <label class="control-label" for="inputTitle">Título</label>
+            <input class="form-control" disabled="" id="inputTitle" type="text" value="<%= @project.title %>"></input>
           </div>
-            <div class="col-md-6">
-              <label class="control-label" for="inputCliente">Cliente</label>
-              <input class="form-control" disabled="" id="inputCliente" type="text" value="<%= @project.client %>"></input>
-            </div>
+          <div class="col-md-6">
+            <label class="control-label" for="inputCliente">Cliente</label>
+            <input class="form-control" disabled="" id="inputCliente" type="text" value="<%= @project.client %>"></input>
+          </div>
+          <br>
+          <div class="col-md-12">
+            <label class="control-label" for="inputDescricao">Descrição</label>
+            <textarea class="form-control" disabled="" id="inputDescricao" type="text"><%= @project.description %></textarea>
+          </div>
         </div>
       </div>
     </div>
