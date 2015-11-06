@@ -1,14 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
 
-<p>
-  <strong>User:</strong>
-  <%= @team.user %>
-</p>
+    <!-- <p id="notice"><%= notice %></p> -->
 
-<p>
-  <strong>Project:</strong>
-  <%= @team.project %>
-</p>
+    <div class="col-md-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <h5 class="col-md-10">Equipe</h5>
+            <div class="col-md-2">
+              <%= link_to edit_team_path(@team), class: "btn btn-warning pull-right" do %>
+              <b>Editar
+                <i class="glyphicon glyphicon-edit"></i>
+              </b>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-6">
+            <label class="control-label" for="inputUser">Usuário</label>
+            <input class="form-control" disabled="" id="inputUser" type="text" value="<%= @team.user %>"></input>
+          </div>
+          <div class="col-md-6">
+            <label class="control-label" for="inputProjeto">Projeto</label>
+            <input class="form-control" disabled="" id="inputProjeto" type="text" value="<%= @team.project %>"></input>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+
+    <div class="clearfix"></div>
+    <br>
+  </div>
+</div>

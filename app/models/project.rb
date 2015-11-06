@@ -6,6 +6,6 @@ class Project < ActiveRecord::Base
   has_many :task
 
   def to_s
-    description
+    title
   end
 end
